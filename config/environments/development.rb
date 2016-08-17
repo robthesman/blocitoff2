@@ -38,4 +38,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  # Original config instructions in https://www.bloc.io/resources/devise were config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # but I don't think that will work with cloud9, so taking advise from here: 
+  # http://stackoverflow.com/questions/30463266/sendgrid-via-devise-attempt-to-send-authentication-email-leads-to-opentimeout-e
+  # and here: https://docs.c9.io/v1.0/discuss/55034a464731190d00360648
+  
+  config.action_mailer.default_url_options = { host: 'localhost:8080' } 
+
+  
+  
 end
